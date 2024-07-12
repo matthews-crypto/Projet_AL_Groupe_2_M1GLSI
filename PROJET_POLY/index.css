@@ -1,0 +1,89 @@
+:root {
+    /* Définir les variables de couleur pour l'ensemble du document */
+    --primary-color: #000000; /* Couleur principale (noir) */
+    --secondary-color: #f1a31b; /* Couleur secondaire (jaune/orange) */
+    --hover-color: #0056b3; /* Couleur au survol (bleu foncé) */
+    --text-color: #fafcff; /* Couleur du texte (blanc) */
+    --border-color: #fefefe; /* Couleur de la bordure (blanc très clair) */
+    --background-color: #fafcff; /* Couleur de fond (blanc) */
+}
+
+body {
+    color: #333; /* Couleur du texte principal (gris foncé) */
+    background-color: var(--background-color); /* Couleur de fond du corps */
+    font-family: Arial, sans-serif; /* Police de caractères utilisée */
+    margin: 0; /* Pas de marge par défaut */
+    padding: 0; /* Pas de padding par défaut */
+}
+
+.conteneur {
+    text-align: center; /* Centrer le texte à l'intérieur du conteneur */
+    padding: 20px; /* Espace intérieur du conteneur */
+    border-radius: 10px; /* Coins arrondis du conteneur */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère autour du conteneur */
+    margin: 20px auto; /* Espace extérieur autour du conteneur et centré horizontalement */
+    max-width: 800px; /* Largeur maximale du conteneur */
+    background-color: var(--background-color); /* Couleur de fond du conteneur */
+}
+
+h1 {
+    color: var(--text-color); /* Couleur du texte du titre */
+    border: 2px solid var(--border-color); /* Bordure autour du titre */
+    padding: 15px; /* Espace intérieur autour du texte du titre */
+    border-radius: 20px; /* Coins arrondis du titre */
+    background-color: var(--primary-color); /* Couleur de fond du titre */
+    margin: 20px 0; /* Marge verticale autour du titre */
+}
+
+.bouton-categorie,
+a {
+    display: inline-block; /* Affichage en bloc en ligne */
+    margin: 10px; /* Marge autour des boutons */
+    padding: 10px 15px; /* Espace intérieur des boutons */
+    color: var(--text-color); /* Couleur du texte des boutons */
+    border: 2px solid var(--border-color); /* Bordure des boutons */
+    border-radius: 20px; /* Coins arrondis des boutons */
+    background-color: var(--primary-color); /* Couleur de fond des boutons */
+    text-decoration: none; /* Pas de soulignement du texte */
+    cursor: pointer; /* Curseur en forme de main pour indiquer cliquable */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour les changements de couleur */
+}
+
+.bouton-categorie:hover,
+a:hover {
+    background-color: var(--secondary-color); /* Couleur de fond au survol */
+    color: var(--primary-color); /* Couleur du texte au survol */
+}
+
+.article {
+    margin: 20px auto; /* Marge autour des articles et centré horizontalement */
+    padding: 20px; /* Espace intérieur des articles */
+    border: 1px solid #ccc; /* Bordure autour des articles */
+    border-radius: 10px; /* Coins arrondis des articles */
+    text-align: left; /* Texte aligné à gauche dans les articles */
+    background-color: #fff; /* Couleur de fond des articles */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Ombre légère autour des articles */
+    max-width: 700px; /* Largeur maximale des articles */
+}
+
+.article h2 {
+    color: var(--text-color); /* Couleur du texte des titres d'articles */
+    border: 2px solid var(--border-color); /* Bordure autour des titres d'articles */
+    padding: 10px; /* Espace intérieur autour des titres d'articles */
+    border-radius: 10px; /* Coins arrondis des titres d'articles */
+    background-color: var(--primary-color); /* Couleur de fond des titres d'articles */
+    margin-bottom: 10px; /* Marge en bas des titres d'articles */
+    font-size: 1.5em; /* Taille de police des titres d'articles */
+}
+
+.article p {
+    margin: 10px 0; /* Marge verticale autour des paragraphes */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+.bouton-categorie:focus,
+a:focus,
+h1:focus {
+    outline: none; /* Pas de contour par défaut au focus */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Ombre spécifique au focus */
+}
