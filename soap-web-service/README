@@ -1,0 +1,47 @@
+Documentation pour l'API SOAP
+
+Fonctionnalités
+L'API SOAP permet de :
+
+-Lister les utilisateurs
+-Ajouter un utilisateur
+-Mettre à jour un utilisateur
+-Supprimer un utilisateur
+-Authentifier un utilisateur
+
+Prérequis : 
+
+Go installé
+Echo Framework installé
+
+STRUCTURE DU PROJET
+soap-web-service/
+├── go.mod
+├── main.go
+
+Instructions
+1- Cloner le Répertoire du Projet :
+
+git clone <repository-url>
+cd soap-web-service
+
+2- Initialiser le Module Go :
+
+go mod init soap-web-service
+
+3- Installer les Dépendances :
+
+go get github.com/labstack/echo/v4
+go get github.com/dgrijalva/jwt-go
+
+
+4- Démarrer le Serveur :
+
+go run main.go
+
+Tester les Endpoints :
+
+Utilise des outils comme Postman pour tester les différents endpoints. Par exemple :
+
+Obtenir un jeton d'authentification : GET http://localhost:1323/login?username=admin&password=admin
+Lister les utilisateurs : GET http://localhost:1323/restricted/users avec l'en-tête Authorization: Bearer token

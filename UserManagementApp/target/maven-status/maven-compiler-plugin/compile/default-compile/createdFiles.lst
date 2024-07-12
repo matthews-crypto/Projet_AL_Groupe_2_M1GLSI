@@ -1,0 +1,5 @@
+com\example\usermanagement\services\AuthService.class
+com\example\usermanagement\services\UserService.class
+com\example\usermanagement\App.class
+com\example\usermanagement\models\User.class
+com\example\usermanagement\utils\HttpClient.class

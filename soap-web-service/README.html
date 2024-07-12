@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation pour l'API SOAP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 1.5em;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 1em;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2em;
+        }
+        .code-block {
+            background-color: #f4f4f4;
+            padding: 1em;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        ul, ol {
+            margin-left: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Documentation pour l'API SOAP</h1>
+
+<h2>Fonctionnalités</h2>
+<p>L'API SOAP permet de :</p>
+<ul>
+    <li>Lister les utilisateurs</li>
+    <li>Ajouter un utilisateur</li>
+    <li>Mettre à jour un utilisateur</li>
+    <li>Supprimer un utilisateur</li>
+    <li>Authentifier un utilisateur</li>
+</ul>
+
+<h2>Prérequis</h2>
+<ul>
+    <li>Go installé</li>
+    <li>Echo Framework installé</li>
+</ul>
+
+<h2>Structure du Projet</h2>
+<pre>
+soap-web-service/
+├── go.mod
+├── main.go
+</pre>
+
+<h2>Instructions</h2>
+<ol>
+    <li>
+        <p>Cloner le Répertoire du Projet :</p>
+        <pre>
+git clone &lt;repository-url&gt;
+cd soap-web-service
+        </pre>
+    </li>
+    <li>
+        <p>Initialiser le Module Go :</p>
+        <pre>
+go mod init soap-web-service
+        </pre>
+    </li>
+    <li>
+        <p>Installer les Dépendances :</p>
+        <pre>
+go get github.com/labstack/echo/v4
+go get github.com/dgrijalva/jwt-go
+        </pre>
+    </li>
+    <li>
+        <p>Démarrer le Serveur :</p>
+        <pre>
+go run main.go
+        </pre>
+    </li>
+    <li>
+        <p>Tester les Endpoints :</p>
+        <p>Utilise des outils comme Postman pour tester les différents endpoints. Par exemple :</p>
+        <ul>
+            <li>Obtenir un jeton d'authentification : <code>GET http://localhost:1323/login?username=admin&password=admin</code></li>
+            <li>Lister les utilisateurs : <code>GET http://localhost:1323/restricted/users</code> avec l'en-tête <code>Authorization: Bearer {token}</code></li>
+        </ul>
+    </li>
+</ol>
+
+</body>
+</html>

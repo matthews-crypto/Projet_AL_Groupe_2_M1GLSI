@@ -1,0 +1,59 @@
+Application Client en Java
+
+Fonctionnalités
+L'application Java permet de :
+
+- Se connecter en utilisant le service web d'authentification
+-Lister les utilisateurs
+-Ajouter un utilisateur
+-Mettre à jour un utilisateur
+-Supprimer un utilisateur
+
+Prérequis
+
+-Java 8 ou supérieur installé
+-Maven installé
+
+
+Structure du Projet
+
+UserManagementApp/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/
+│       │       └── example/
+│       │           └── usermanagement/
+│       │               ├── App.java
+│       │               ├── AuthService.java
+│       │               ├── UserService.java
+│       │               ├── models/
+│       │               │   ├── User.java
+│       │               └── utils/
+│       │                   ├── HttpClient.java
+├── pom.xml
+
+
+Instructions
+
+1 - Cloner le Répertoire du Projet :
+
+git clone <repository-url>
+cd UserManagementApp
+
+
+2- Ajouter les Dépendances dans pom.xml
+
+3- Compiler et Exécuter l'Application 
+
+
+
+Utilisation
+
+Se Connecter : Lancer l'application, entrer le nom d'utilisateur et le mot de passe pour obtenir un jeton.
+Gestion des Utilisateurs : Utiliser les options du menu pour lister, ajouter, mettre à jour et supprimer des utilisateurs.
+
+Remarques
+
+Assure-toi que l'API SOAP est en cours d'exécution sur http://localhost:1323.
+Utilise un outil comme Postman pour tester manuellement les endpoints si nécessaire.
